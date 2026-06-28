@@ -1,0 +1,133 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #1a202c;
+}
+
+.app { min-height: 100vh; }
+
+.header {
+  background: #1a365d;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-icon { font-size: 28px; }
+.logo-text { font-size: 24px; font-weight: 700; color: white; letter-spacing: -0.5px; }
+.logo-tagline { color: #90cdf4; font-size: 14px; }
+
+.main { padding: 32px 24px; }
+
+.container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+
+.input-panel, .results-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.panel-title { font-size: 18px; font-weight: 600; color: #1a365d; margin-bottom: 20px; }
+
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: #4a5568; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.form-row { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+
+textarea, input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+  color: #2d3748;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49,130,206,0.1);
+}
+
+.error { background: #fff5f5; border: 1px solid #fed7d7; color: #c53030; padding: 10px 14px; border-radius: 8px; font-size: 14px; margin-bottom: 16px; }
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #1a365d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.submit-btn:hover:not(:disabled) { background: #2c5282; }
+.submit-btn:disabled { background: #a0aec0; cursor: not-allowed; }
+
+.loading { text-align: center; padding: 40px; }
+.spinner { width: 40px; height: 40px; border: 3px solid #e2e8f0; border-top-color: #1a365d; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading p { color: #718096; font-size: 14px; }
+
+.disclaimer { background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #2b6cb0; margin-bottom: 24px; }
+
+.synthesis h2 { font-size: 18px; font-weight: 600; color: #1a365d; margin-bottom: 16px; }
+.synthesis-content p { font-size: 14px; line-height: 1.7; color: #2d3748; margin-bottom: 8px; }
+
+.sources { margin-top: 28px; border-top: 1px solid #e2e8f0; padding-top: 24px; }
+.sources h3 { font-size: 15px; font-weight: 600; color: #4a5568; margin-bottom: 16px; }
+
+.sources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+
+.source-card { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; }
+.source-category { font-size: 11px; font-weight: 700; color: #3182ce; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.source-name { font-size: 13px; font-weight: 600; color: #2d3748; margin-bottom: 8px; }
+.source-excerpt { font-size: 12px; color: #718096; line-height: 1.5; }
+.synthesis-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a365d;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.synthesis-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.synthesis-content ul {
+  margin: 8px 0 12px 20px;
+}
+
+.synthesis-content li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.synthesis-content strong {
+  color: #1a365d;
+  font-weight: 600;
+}
