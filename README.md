@@ -1,4 +1,6 @@
 # DocBrief - AI-Assisted Clinical Evidence Synthesis
+App link: 
+Open **http://localhost:3000**
 
 A clinical decision support application that helps physicians surface relevant evidence-based guidelines instantly. The doctor enters patient symptoms, lab values, and medical history — DocBrief retrieves the most relevant clinical guidelines from its knowledge base and synthesizes an evidence-backed clinical assessment using LLM.
 
